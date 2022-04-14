@@ -1,0 +1,27 @@
+body {
+    margin: 7%;
+    background-color: #dae5e7;
+    font-family: "Avenir Next", sans-serif;
+}
+
+.orders {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#one-order {
+    color: rgb(235, 248, 251);
+    grid-area: order;
+    margin: 2%;
+    padding: 2%;
+    background-color: rgb(109, 118, 220);
+    border: solid 3px rgb(44, 44, 68);
+    border-radius: 15px;
+    flex-basis: 20%;
+
+
+}
+
+a {
+    color:aliceblue;
+}

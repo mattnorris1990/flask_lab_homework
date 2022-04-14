@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheet.css') }}">
+    <title>{{ title }} - Current orders</title>
+</head>
+<body>
+    <h1>Current Orders</h1>
+    <section class="orders">
+    {% for order in orders %}
+    <div id="one-order">
+        <p>
+            <b>{{order.order_date}}: {{order.customer_name}}</b>
+        </p>
+        <p>
+            {{order.book_title}} x {{order.quantity}}
+        </p>
+        <p>
+            <a href="http://127.0.0.1:4999/orders/{{orders.index(order)}}">Click to see order</a>
+        </p>
+    </div>
+    {% endfor %}
+</section>
+</body>
+</html>
